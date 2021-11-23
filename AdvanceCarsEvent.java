@@ -7,7 +7,8 @@ public class AdvanceCarsEvent extends Event{
     private final List<Car> roadStatus;
     private final List<Car> destinations;
     private final List<Car> newRoadStatus;
-    private final boolean greenStatus;
+    //private final List<Double> carDistances;
+    private final boolean greenStatus;//<--------------COMMENT OUT TO IGNORE GREEN LIGHT
     private final Integer timeStep;
 
     public AdvanceCarsEvent(Integer eventType, Integer timeStep, RoadData roadData, List<RoadData> roadOrder) {
@@ -17,7 +18,8 @@ public class AdvanceCarsEvent extends Event{
         this.roadStatus = roadData.getRoadFill();
         this.destinations = roadData.getCarQueue();
         this.newRoadStatus = new ArrayList<Car>(roadStatus.size());
-        this.greenStatus = roadData.isGreenStatus();
+        //this.carDistances = new ArrayList<Double>();
+        this.greenStatus = roadData.isGreenStatus();//<--------------COMMENT OUT TO IGNORE GREEN LIGHT
         this.timeStep = timeStep;
         newRoadStatus.addAll(roadStatus);
     }
@@ -36,15 +38,16 @@ public class AdvanceCarsEvent extends Event{
             //System.out.println("The next if: " +(roadData.getToNode().equals(newDestination)));
             if((roadData.getToNode().equals(newDestination))) {
                 //need to turn this into an event
-                System.out.println("CYCLE: "+ timeStep + " - Car successfully traveled from " +
+                System.out.println("CYCLE "+ timeStep + " - Car successfully traveled from " +
                         roadStatus.get(0).getStart() + " to " + roadStatus.get(0).getDest() +
                         " in " + roadStatus.get(0).getTraveled() + " time steps.");
+                //carDistances.add((double)roadStatus.get(0).getTraveled());
             } else {
-                System.out.println(roadOrder.get(0));
+                //System.out.println(roadOrder.get(0));
                 //Edge current = roadData.getEdge();
                 Node fromNode = roadData.getToNode();
                 for(RoadData edgy : roadOrder) {
-                    System.out.println("Edgy: "+ (edgy.getToNode().equals(newDestination)));
+                    //System.out.println("Edgy: "+ (edgy.getToNode().equals(newDestination)));
                     if(edgy.getToNode().equals(newDestination)) {
                         Node toNode = edgy.getToNode();
                         //System.out.println(toNode);
@@ -63,13 +66,13 @@ public class AdvanceCarsEvent extends Event{
             }
             //System.out.println("CYCLE: "+ timeStep + "Hey look ma - I made it!!");
         }
-        System.out.println((roadStatus.get(roadStatus.size()-1)==null) + " " + greenStatus + " " + !destinations.isEmpty());
+        //System.out.println((roadStatus.get(roadStatus.size()-1)==null) + " " + greenStatus + " " + !destinations.isEmpty());
         if((roadStatus.get(roadStatus.size()-1) == null) &&
-                greenStatus &&
+                greenStatus &&        //<--------------COMMENT OUT TO IGNORE GREEN LIGHT
                 !destinations.isEmpty()) {
             destinations.get(0).traveledPlus();
             newRoadStatus.set(roadStatus.size() - 1, destinations.remove(0));
-            System.out.println("newRoadStatus: " + newRoadStatus);
+            //System.out.println("newRoadStatus: " + newRoadStatus);
         } else newRoadStatus.set(roadStatus.size() - 1, null);
         for(int i = roadStatus.size()-2; i >= 0; i--) {
             if(!(roadStatus.get(i+1) == null)) roadStatus.get(i+1).traveledPlus();
@@ -80,4 +83,8 @@ public class AdvanceCarsEvent extends Event{
         roadData.setRoadFill(newRoadStatus);
         return returnList;
     }
+
+//    public List<Double> getCarDistances() {
+//        return carDistances;
+//    }
 }

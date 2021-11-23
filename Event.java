@@ -8,10 +8,11 @@ public class Event implements Comparable<Event> {
     boolean printable;
     /*
     eventType = 1: ADD_CAR_EVENT
-    eventType = 2: PRINT_ROADS_EVENT
+
     eventType = 3: Car successfully traveled
     eventType = 4: advance cars
     eventType = 5: change light
+    eventType = 6: PRINT_ROADS_EVENT
      */
 
     public Event(Integer eventType, Integer timeStep) {

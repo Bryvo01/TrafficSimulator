@@ -35,90 +35,36 @@ printCommandCycleNumber = list of what cycles to print a command on
 
 
 
-case 4:
-    List advance = tempEvent.advanceCars();
-    System.out.println((boolean) advance.get(0));
-    if((boolean) advance.get(0)) {
-        Node fromNode = (Node) advance.get(1);
-        Node toNode = (Node) advance.get(2);
-        Car toCar = (Car) advance.get(3);
-        Node nextNode = trafficGraph.getNextOnPath(fromNode, toNode);
-        for (RoadData rd : roadOrder) {
-            //find the next road to go on
-            System.out.println("other if: " + (rd.getToNode().equals(nextNode) && rd.getFromNode().equals(fromNode)));
-            if (rd.getToNode().equals(nextNode) && rd.getFromNode().equals(fromNode)) {
-                //if the light is green and there is space, drive onto the road
-                List tempRoadFill = rd.getRoadFill();
-                System.out.println("before if: " + tempRoadFill);
-                if (rd.getGreenStatus() && !(tempRoadFill.get(tempRoadFill.size() - 1) == null) &&
-                    rd.isCarQueueEmpty()) {
-                    System.out.println("inside if: " + tempRoadFill);
-                    tempRoadFill.set(tempRoadFill.size() - 1, toCar);
-                    rd.setRoadFill(tempRoadFill);
-                    eventPriorityQueue.add(new AdvanceCarsEvent(4, cycle, rd, roadOrder));
-                } else {
-                    List<Car> newDestination = new ArrayList<Car>();
-                    newDestination.add(toCar);
-                    eventPriorityQueue.add(new AddCarEvent(1, cycle, rd, newDestination));
-                }
-            }
-            //Event tempAddCar = (Event) advance.get(1);
-            //Node nextNode = trafficGraph.getNextOnPath(tempAddCar.getRoadData().getEdge().getFrom(), )
-            //eventPriorityQueue.add((Event) advance.get(1));
-        }
-    }
-
-public List<Object> advanceCars() {
-    for(Car car : destinations){
-        if(!(car == null)) { car.traveledPlus();}
-        }
-    List<Object> returnList = new ArrayList<Object>(4);
-    returnList.add(0, false);
-    //Integer[] temp = new Integer[newRoadStatus.size()];
-    if(!(roadStatus.get(0) == null)){
-        //roadStatus.get(0).traveledPlus();
-        Node newDestination = roadStatus.get(0).getDestNode();
-        if((roadData.getToNode().equals(newDestination))) {
-            //need to turn this into an event
-            System.out.println("CYCLE: "+ timeStep + " - Car successfully traveled from " +
-                    roadStatus.get(0).getStart() + " to " + roadStatus.get(0).getDest() +
-                    " in " + roadStatus.get(0).getTraveled() + " time steps.");
-        } else {
-            //System.out.println(roadOrder.get(0));
-            //Edge current = roadData.getEdge();
-            Node fromNode = roadData.getToNode();
-            for(RoadData edgy : roadOrder) {
-                if(edgy.getToNode().equals(newDestination)) {
-                    Node toNode = edgy.getToNode();
-                    //System.out.println(toNode);
-//                        List<Integer> addQueue = new ArrayList<>();
-//                        addQueue.add(roadStatus.get(0));
-//                        System.out.println("edgyFrom " + edgy.getEdge().getFrom() + "edgyTo " +
-//                                edgy.getEdge().getTo() + "edgyQ " + edgy.getCarQueue());
-                    //AddCarEvent addCarEvent = new AddCarEvent(1, timeStep, edgy, addQueue);
-                    returnList.set(0, true);
-                    returnList.add(fromNode);
-                    returnList.add(toNode);
-                    returnList.add(roadStatus.get(0));
-                }
-            }
-
-        }
-        //System.out.println("CYCLE: "+ timeStep + "Hey look ma - I made it!!");
-    }
-    //System.out.println((roadStatus.get(roadStatus.size()-1)==-1) + " " + greenStatus + " " + !destinations.isEmpty());
-    if((roadStatus.get(roadStatus.size()-1) == null) &&
-            greenStatus &&
-            !destinations.isEmpty()) {
-        destinations.get(0).traveledPlus();
-        newRoadStatus.set(roadStatus.size() - 1, destinations.remove(0));
-    } else newRoadStatus.set(roadStatus.size() - 1, null);
-    for(int i = roadStatus.size()-2; i >= 0; i--) {
-        if(!(roadStatus.get(i+1) == null)) roadStatus.get(i+1).traveledPlus();
-        newRoadStatus.set(i, roadStatus.get(i+1));
-    }
-//        System.out.println("Cycle: " + timeStep + " Road: " + roadData.getFromNode() + "," +
-//                roadData.getToNode() + " Status: " + newRoadStatus + " GreenLight: " + roadData.getGreenStatus());
-//        roadData.setRoadFill(newRoadStatus);
-    return returnList;
-}
+                        case 4:
+                            List advance = tempEvent.advanceCars();
+                            //System.out.println("Case 4 start: " + (boolean) advance.get(0));
+                            if((boolean) advance.get(0)) {
+                                Node fromNode = (Node) advance.get(1);
+                                Node toNode = (Node) advance.get(2);
+                                Car toCar = (Car) advance.get(3);
+                                Node nextNode = trafficGraph.getNextOnPath(fromNode, toNode);
+                                for (RoadData rd : roadOrder) {
+                                    //find the next road to go on
+                                    //System.out.println("other if: " + (rd.getToNode().equals(nextNode) && rd.getFromNode().equals(fromNode)));
+                                    if (rd.getToNode().equals(nextNode) && rd.getFromNode().equals(fromNode)) {
+                                        //if the light is green and there is space, drive onto the road
+                                        List tempRoadFill = rd.getRoadFill();
+                                        //System.out.println("before if: " + tempRoadFill + "GreenLight: " +rd.getGreenStatus());
+                                        if (rd.getGreenStatus() && (tempRoadFill.get(tempRoadFill.size() - 1) == null) &&
+                                                rd.isCarQueueEmpty()) {
+                                            //System.out.println("inside if: " + tempRoadFill);
+                                            tempRoadFill.set(tempRoadFill.size() - 1, toCar);
+                                            rd.setRoadFill(tempRoadFill);
+                                            eventPriorityQueue.add(new AdvanceCarsEvent(4, cycle, rd, roadOrder));
+                                        } else {
+                                            List<Car> newDestination = new ArrayList<Car>();
+                                            newDestination.add(toCar);
+                                            eventPriorityQueue.add(new AddCarEvent(1, cycle, rd, newDestination));
+                                        }
+                                    }
+                                    //Event tempAddCar = (Event) advance.get(1);
+                                    //Node nextNode = trafficGraph.getNextOnPath(tempAddCar.getRoadData().getEdge().getFrom(), )
+                                    //eventPriorityQueue.add((Event) advance.get(1));
+                                }
+                            }
+                            break;

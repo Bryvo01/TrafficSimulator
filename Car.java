@@ -32,6 +32,6 @@ public class Car {
     }
 
     public void traveledPlus() {
-        this.traveled++;
+        traveled++;
     }
 }
