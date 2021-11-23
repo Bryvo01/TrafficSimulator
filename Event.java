@@ -23,16 +23,8 @@ public class Event implements Comparable<Event> {
         this.printable = false;
     }
 
-    public void setEventType(Integer eventType) {
-        this.eventType = eventType;
-    }
-
     public Integer getEventType() {
         return eventType;
-    }
-
-    public void setTimeStep(double timeStep) {
-        this.timeStep = timeStep;
     }
 
     public double getTimeStep() {

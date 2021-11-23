@@ -5,14 +5,12 @@ public class TrafficSimulator
 {
     public static void simulate( String inputFile )
     {
-        //TODO: read in the graph information from the file and simulate traffic in the city
+        //DONE: read in the graph information from the file and simulate traffic in the city
         File tempFile = new File(inputFile);
         List<String> tempList = new ArrayList<String>();
         List<String> inputList;
         List<RoadData> roadOrder = new ArrayList<RoadData>();
         List<Integer> carDestinations = new ArrayList<Integer>();
-        //List<List<Object>> carCommandList = new ArrayList<List<Object>>();
-        //List<Double> carDistances = new ArrayList<Double>();
         List<Car> allCars = new ArrayList<Car>();
         List<Integer> printCommandCycleNumber = new ArrayList<Integer>();
         PriorityQueue<Event> eventPriorityQueue = new PriorityQueue<Event>();
@@ -28,7 +26,6 @@ public class TrafficSimulator
         inputList = removeEmpty(tempList);
         String[] temp = inputList.remove(0).split("\\s+");
         Integer numVertices = Integer.parseInt(temp[0]);
-        //Integer numEdges = Integer.parseInt(temp[1]);
         for(Integer i=0;i<numVertices;i++) {
             trafficGraph.addNode(i);
         }
@@ -55,7 +52,6 @@ public class TrafficSimulator
                     eventPriorityQueue.add(stopLight);
                 }
             }
-            //System.out.println(incomingRoads);
         }
         Integer numCarCommands = Integer.parseInt(inputList.remove(0));
         if(numCarCommands.equals(0)) ;
@@ -67,7 +63,6 @@ public class TrafficSimulator
                 Integer fromCarVertex = Integer.parseInt(carCommand[0]);
                 Node fromCarVertexNode = trafficGraph.getNode(fromCarVertex);
                 Integer toCarVertex = Integer.parseInt(carCommand[1]);
-                //Node toCarVertexNode = trafficGraph.getNode(toCarVertex);
                 Integer cycleStart = Integer.parseInt(carCommand[2]);
                 makeIntList(inputList, tempCarDest);
                 List<Node> tempNodeDestination = new ArrayList<Node>();
@@ -89,31 +84,19 @@ public class TrafficSimulator
                         eventPriorityQueue.add(newEvent);
                     }
                 }
-//                tempList2.add(fromCarVertex);
-//                tempList2.add(toCarVertex);
-//                tempList2.add(cycleStart);
-//                tempList2.add(tempCarDest);
-//                carCommandList.add(tempList2);
             }
         }
         makeIntList(inputList, printCommandCycleNumber);
         for(Integer item : printCommandCycleNumber) {
-            //System.out.println("print command: " + item);
             Event newEvent = new PrintRoadsEvent(6, item, roadOrder);
-            //newEvent.setPrintable();
             eventPriorityQueue.add(newEvent);
-            //System.out.println(newEvent.getTimeStep());
         }
-        //System.out.println(eventPriorityQueue.size());
         Boolean roadsEmpty = false;
         while(!eventPriorityQueue.isEmpty() && !roadsEmpty) {
-            //System.out.println(eventPriorityQueue.size() + "next: " + eventPriorityQueue.peek().getEventType());
             while (true) {
                 if(eventPriorityQueue.isEmpty()) break;
                 if (!(eventPriorityQueue.peek().getTimeStep() <= cycle)) break;
                 try {
-//                    System.out.println(eventPriorityQueue.peek().getTimeStep() + "<-timestep|cycle->" + cycle + " Event: " +
-//                            eventPriorityQueue.peek().getEventType());
                     Event tempEvent = eventPriorityQueue.poll();
                     assert tempEvent != null;
                     Integer eventType = tempEvent.getEventType();
@@ -142,22 +125,17 @@ public class TrafficSimulator
                             break;
                         case 4:
                             List advance = tempEvent.advanceCars();
-                            //System.out.println("Case 4 start: " + (boolean) advance.get(0));
                             if((boolean) advance.get(0)) {
                                 Node fromNode = (Node) advance.get(1);
                                 Node toNode = (Node) advance.get(2);
                                 Car toCar = (Car) advance.get(3);
                                 Node nextNode = trafficGraph.getNextOnPath(fromNode, toNode);
                                 for (RoadData rd : roadOrder) {
-                                    //find the next road to go on
-                                    //System.out.println("other if: " + (rd.getToNode().equals(nextNode) && rd.getFromNode().equals(fromNode)));
                                     if (rd.getToNode().equals(nextNode) && rd.getFromNode().equals(fromNode)) {
                                         //if the light is green and there is space, drive onto the road
                                         List tempRoadFill = rd.getRoadFill();
-                                        //System.out.println("before if: " + tempRoadFill + "GreenLight: " +rd.getGreenStatus());
                                         if (rd.getGreenStatus() && (tempRoadFill.get(tempRoadFill.size() - 1) == null) &&
                                                 rd.isCarQueueEmpty()) {
-                                            //System.out.println("inside if: " + tempRoadFill);
                                             tempRoadFill.set(tempRoadFill.size() - 1, toCar);
                                             rd.setRoadFill(tempRoadFill);
                                             eventPriorityQueue.add(new AdvanceCarsEvent(4, cycle, rd, roadOrder));
@@ -167,15 +145,11 @@ public class TrafficSimulator
                                             eventPriorityQueue.add(new AddCarEvent(1, cycle, rd, newDestination));
                                         }
                                     }
-                                    //Event tempAddCar = (Event) advance.get(1);
-                                    //Node nextNode = trafficGraph.getNextOnPath(tempAddCar.getRoadData().getEdge().getFrom(), )
-                                    //eventPriorityQueue.add((Event) advance.get(1));
                                 }
                             }
                             break;
                         case 5:
                             tempEvent.changeGreenStatus();
-                            //System.out.println("Light change!!  " + tempEvent.getRoadData().getGreenStatus());
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -186,10 +160,7 @@ public class TrafficSimulator
             for(RoadData tempRd : roadOrder) {
                 findAll.add(tempRd.isRoadEmpty());
                 findAll.add(tempRd.isCarQueueEmpty());
-                //System.out.println(tempRd.isRoadEmpty() + "<-road:queue->" + tempRd.isCarQueueEmpty());
                 if(!tempRd.isCarQueueEmpty() || !tempRd.isRoadEmpty()) {
-                    //System.out.println("HAI");
-                    //System.out.println(tempRd.getRoadFillInt());
                     eventPriorityQueue.add(new AdvanceCarsEvent(4, cycle-1, tempRd, roadOrder));
                 }
                 if(cycle > tempRd.getGreenOff() && cycle % tempRd.getCycleResets() == 0 ){
@@ -208,7 +179,6 @@ public class TrafficSimulator
             allDistances.add(car.getTraveled());
             avgDistance += car.getTraveled();
         }
-        //Integer maxIndex = allDistances.indexOf(Collections.max(allDistances));
         int maxIndex = findMaxIndex(allDistances);
         avgDistance = avgDistance/allCars.size();
         System.out.println("\nAverage number of time steps to the reach their destination is " + String.format("%.2f",avgDistance));

@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class RoadData {
-    //private Integer data;
     private final Edge edge;
     private final Integer greenOn;
     private final Integer greenOff;
@@ -38,10 +37,6 @@ public class RoadData {
 
     public Node getToNode() {
         return toNode;
-    }
-
-    public int getGreenOn() {
-        return greenOn;
     }
 
     public int getGreenOff() {

@@ -1,6 +1,6 @@
 public class GreenLightEvent extends Event{
 
-    private RoadData roadData;
+    private final RoadData roadData;
 
     public GreenLightEvent(Integer eventType, Integer timeStep, RoadData roadData) {
         super(eventType, timeStep);
