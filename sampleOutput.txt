@@ -1,0 +1,886 @@
+
+--------------- START OF OUTPUT FOR data-Trivial.txt -----------------
+
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 0 to 1
+
+CYCLE 0 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 0 to 1: 
+- - - - 
+
+
+CYCLE 1 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 0 to 1: 
+- - - 1 
+
+
+CYCLE 2 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 0 to 1: 
+- - 1 - 
+
+
+CYCLE 3 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 0 to 1: 
+- 1 - - 
+
+
+CYCLE 4 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 0 to 1: 
+1 - - - 
+
+CYCLE 4 - Car successfully traveled from 0 to 1 in 5 time steps.
+
+CYCLE 5 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 0 to 1: 
+- - - - 
+
+
+Average number of time steps to the reach their destination is 5.00.
+Maximum number of time steps to the reach their destination is 5.
+
+--------------- END OF OUTPUT FOR data-Trivial.txt -----------------
+
+
+
+--------------- START OF OUTPUT FOR data-Simple.txt -----------------
+
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 0 to 1
+CYCLE 6 - Car successfully traveled from 0 to 3 in 7 time steps.
+CYCLE 8 - Car successfully traveled from 0 to 3 in 9 time steps.
+
+CYCLE 10 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 0 to 1: 
+- - 
+Cars on the road from 1 to 2: 
+- - 
+Cars on the road from 2 to 3: 
+3 - 
+
+CYCLE 10 - Car successfully traveled from 0 to 3 in 11 time steps.
+
+Average number of time steps to the reach their destination is 9.00.
+Maximum number of time steps to the reach their destination is 11.
+
+--------------- END OF OUTPUT FOR data-Simple.txt -----------------
+
+
+
+--------------- START OF OUTPUT FOR data-Complex1.txt -----------------
+
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 0 to 3
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 1 to 3
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 2 to 3
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 3 to 7
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 7 to 3
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 4 to 7
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 5 to 7
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 6 to 7
+
+CYCLE 0 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - - - - 
+Cars on the road from 3 to 1: 
+- - - - - - - - - - 
+Cars on the road from 3 to 2: 
+- - - - - - - - - - 
+Cars on the road from 0 to 3: 
+- - - - - - - - - - 
+Cars on the road from 1 to 3: 
+- - - - - - - - - - 
+Cars on the road from 2 to 3: 
+- - - - - - - - - - 
+Cars on the road from 7 to 3: 
+- - - - - 
+Cars on the road from 7 to 4: 
+- - - - - - - - - - 
+Cars on the road from 7 to 5: 
+- - - - - - - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - - - 
+Cars on the road from 3 to 7: 
+- - - - - 
+Cars on the road from 4 to 7: 
+- - - - - - - - - - 
+Cars on the road from 5 to 7: 
+- - - - - - - - - - 
+Cars on the road from 6 to 7: 
+- - - - - - - - - - 
+
+
+CYCLE 1 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - - - - 
+Cars on the road from 3 to 1: 
+- - - - - - - - - - 
+Cars on the road from 3 to 2: 
+- - - - - - - - - - 
+Cars on the road from 0 to 3: 
+- - - - - - - - - 5 
+Cars on the road from 1 to 3: 
+- - - - - - - - - 7 
+Cars on the road from 2 to 3: 
+- - - - - - - - - 4 
+Cars on the road from 7 to 3: 
+- - - - 0 
+Cars on the road from 7 to 4: 
+- - - - - - - - - - 
+Cars on the road from 7 to 5: 
+- - - - - - - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - - - 
+Cars on the road from 3 to 7: 
+- - - - 4 
+Cars on the road from 4 to 7: 
+- - - - - - - - - 0 
+Cars on the road from 5 to 7: 
+- - - - - - - - - 0 
+Cars on the road from 6 to 7: 
+- - - - - - - - - 2 
+
+CYCLE 4 - ADD_CAR_EVENT - Cars enqueued on road from 2 to 3
+
+CYCLE 5 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - - - - 
+Cars on the road from 3 to 1: 
+- - - - - - - - - - 
+Cars on the road from 3 to 2: 
+- - - - - - - - - - 
+Cars on the road from 0 to 3: 
+- - - - - 5 - 1 - 5 
+Cars on the road from 1 to 3: 
+- - - - - 7 - 0 - 4 
+Cars on the road from 2 to 3: 
+- - - - - 4 - 2 - 7 
+Cars on the road from 7 to 3: 
+0 - 2 - 1 
+Cars on the road from 7 to 4: 
+- - - - - - - - - - 
+Cars on the road from 7 to 5: 
+- - - - - - - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - - - 
+Cars on the road from 3 to 7: 
+4 - 7 - 5 
+Cars on the road from 4 to 7: 
+- - - - - 0 - 1 - 2 
+Cars on the road from 5 to 7: 
+- - - - - 0 - 0 - 0 
+Cars on the road from 6 to 7: 
+- - - - - 2 - 2 - 1 
+
+CYCLE 8 - Car successfully traveled from 3 to 7 in 9 time steps.
+
+CYCLE 10 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - 0 - - 
+Cars on the road from 3 to 1: 
+- - - - - - - - - - 
+Cars on the road from 3 to 2: 
+- - - - - - - - 2 - 
+Cars on the road from 0 to 3: 
+5 - 1 - 5 - 6 - 7 - 
+Cars on the road from 1 to 3: 
+7 - 0 - 4 - 5 - 6 - 
+Cars on the road from 2 to 3: 
+4 - 2 - 7 - 6 - 6 - 
+Cars on the road from 7 to 3: 
+1 - 3 - - 
+Cars on the road from 7 to 4: 
+- - - - - - - 4 - - 
+Cars on the road from 7 to 5: 
+- - - - - - - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - - - 
+Cars on the road from 3 to 7: 
+5 - 6 - - 
+Cars on the road from 4 to 7: 
+0 - 1 - 2 - 5 - 0 - 
+Cars on the road from 5 to 7: 
+0 - 0 - 0 - 0 - 2 - 
+Cars on the road from 6 to 7: 
+2 - 2 - 1 - 1 - 2 - 
+
+CYCLE 17 - Car successfully traveled from 7 to 0 in 18 time steps.
+CYCLE 17 - Car successfully traveled from 3 to 4 in 18 time steps.
+CYCLE 18 - Car successfully traveled from 7 to 2 in 19 time steps.
+CYCLE 18 - Car successfully traveled from 7 to 3 in 19 time steps.
+CYCLE 23 - Car successfully traveled from 1 to 0 in 24 time steps.
+CYCLE 25 - Car successfully traveled from 2 to 2 in 26 time steps.
+CYCLE 27 - Car successfully traveled from 7 to 1 in 28 time steps.
+CYCLE 27 - Car successfully traveled from 3 to 5 in 28 time steps.
+CYCLE 28 - Car successfully traveled from 3 to 6 in 29 time steps.
+CYCLE 28 - Car successfully traveled from 1 to 7 in 29 time steps.
+CYCLE 30 - Car successfully traveled from 0 to 1 in 31 time steps.
+CYCLE 37 - Car successfully traveled from 4 to 0 in 38 time steps.
+CYCLE 37 - Car successfully traveled from 0 to 5 in 38 time steps.
+CYCLE 47 - Car successfully traveled from 5 to 0 in 48 time steps.
+CYCLE 47 - Car successfully traveled from 2 to 4 in 48 time steps.
+CYCLE 48 - Car successfully traveled from 6 to 2 in 49 time steps.
+CYCLE 48 - Car successfully traveled from 0 to 5 in 49 time steps.
+
+CYCLE 50 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - - 0 - 
+Cars on the road from 3 to 1: 
+- - - - - - - 1 - - 
+Cars on the road from 3 to 2: 
+- - - - - - - - - - 
+Cars on the road from 0 to 3: 
+4 4 7 2 6 - - - - - 
+Cars on the road from 1 to 3: 
+4 5 6 1 2 - - - - - 
+Cars on the road from 2 to 3: 
+7 6 6 5 4 1 5 7 5 5 
+Cars on the road from 7 to 3: 
+2 - 0 - 0 
+Cars on the road from 7 to 4: 
+- - - - - - - 4 - - 
+Cars on the road from 7 to 5: 
+5 - - - - - - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - 6 - 
+Cars on the road from 3 to 7: 
+5 - 7 - 6 
+Cars on the road from 4 to 7: 
+3 3 0 0 5 - - - - - 
+Cars on the road from 5 to 7: 
+0 2 2 2 2 1 1 - - - 
+Cars on the road from 6 to 7: 
+2 1 1 2 2 5 3 1 1 - 
+
+CYCLE 50 - Car successfully traveled from 4 to 5 in 51 time steps.
+CYCLE 57 - Car successfully traveled from 4 to 1 in 58 time steps.
+CYCLE 57 - Car successfully traveled from 1 to 4 in 58 time steps.
+CYCLE 58 - Car successfully traveled from 5 to 0 in 59 time steps.
+CYCLE 58 - Car successfully traveled from 0 to 6 in 59 time steps.
+CYCLE 58 - Car successfully traveled from 0 to 7 in 59 time steps.
+CYCLE 67 - Car successfully traveled from 4 to 2 in 68 time steps.
+CYCLE 67 - Car successfully traveled from 1 to 5 in 68 time steps.
+CYCLE 68 - Car successfully traveled from 4 to 0 in 69 time steps.
+CYCLE 68 - Car successfully traveled from 4 to 3 in 69 time steps.
+CYCLE 77 - Car successfully traveled from 5 to 0 in 78 time steps.
+CYCLE 77 - Car successfully traveled from 1 to 6 in 78 time steps.
+CYCLE 78 - Car successfully traveled from 4 to 3 in 79 time steps.
+CYCLE 78 - Car successfully traveled from 0 to 4 in 79 time steps.
+CYCLE 87 - Car successfully traveled from 5 to 0 in 88 time steps.
+CYCLE 87 - Car successfully traveled from 1 to 4 in 88 time steps.
+CYCLE 90 - Car successfully traveled from 0 to 2 in 91 time steps.
+CYCLE 92 - Car successfully traveled from 1 to 1 in 93 time steps.
+CYCLE 93 - Car successfully traveled from 1 to 2 in 94 time steps.
+CYCLE 97 - Car successfully traveled from 5 to 2 in 98 time steps.
+CYCLE 97 - Car successfully traveled from 0 to 4 in 98 time steps.
+CYCLE 97 - Car successfully traveled from 0 to 7 in 98 time steps.
+CYCLE 98 - Car successfully traveled from 4 to 0 in 99 time steps.
+CYCLE 98 - Car successfully traveled from 1 to 5 in 99 time steps.
+
+CYCLE 100 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - - 0 - 
+Cars on the road from 3 to 1: 
+- - - - - - - - - - 
+Cars on the road from 3 to 2: 
+- - - - - - - 2 - - 
+Cars on the road from 0 to 3: 
+- - - - - - - - - - 
+Cars on the road from 1 to 3: 
+- - - - - - - - - - 
+Cars on the road from 2 to 3: 
+6 6 5 4 1 5 - 7 5 5 
+Cars on the road from 7 to 3: 
+2 - 2 - 2 
+Cars on the road from 7 to 4: 
+- - - - - - - - - - 
+Cars on the road from 7 to 5: 
+5 - - - - - - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - 6 - 
+Cars on the road from 3 to 7: 
+6 - 7 - - 
+Cars on the road from 4 to 7: 
+- - - - - - - - - - 
+Cars on the road from 5 to 7: 
+1 1 - - - - - - - - 
+Cars on the road from 6 to 7: 
+1 1 2 2 5 3 - 1 1 - 
+
+CYCLE 100 - Car successfully traveled from 4 to 5 in 101 time steps.
+CYCLE 107 - Car successfully traveled from 5 to 2 in 108 time steps.
+CYCLE 108 - Car successfully traveled from 4 to 0 in 109 time steps.
+CYCLE 108 - Car successfully traveled from 1 to 6 in 109 time steps.
+CYCLE 108 - Car successfully traveled from 2 to 7 in 109 time steps.
+CYCLE 117 - Car successfully traveled from 5 to 2 in 118 time steps.
+CYCLE 117 - Car successfully traveled from 0 to 6 in 118 time steps.
+CYCLE 127 - Car successfully traveled from 5 to 2 in 128 time steps.
+CYCLE 127 - Car successfully traveled from 2 to 6 in 128 time steps.
+CYCLE 137 - Car successfully traveled from 6 to 2 in 138 time steps.
+CYCLE 137 - Car successfully traveled from 2 to 6 in 138 time steps.
+CYCLE 138 - Car successfully traveled from 5 to 1 in 139 time steps.
+CYCLE 145 - Car successfully traveled from 2 to 1 in 146 time steps.
+CYCLE 147 - Car successfully traveled from 6 to 1 in 148 time steps.
+CYCLE 147 - Car successfully traveled from 2 to 5 in 148 time steps.
+
+CYCLE 150 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - - - - 
+Cars on the road from 3 to 1: 
+- - - - - - - 1 - - 
+Cars on the road from 3 to 2: 
+- - - - - - - - - - 
+Cars on the road from 0 to 3: 
+- - - - - - - - - - 
+Cars on the road from 1 to 3: 
+- - - - - - - - - - 
+Cars on the road from 2 to 3: 
+7 5 5 5 5 5 - 5 5 - 
+Cars on the road from 7 to 3: 
+1 2 2 - - 
+Cars on the road from 7 to 4: 
+- - - - - - - 4 - - 
+Cars on the road from 7 to 5: 
+- - - - - 5 - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - - - 
+Cars on the road from 3 to 7: 
+5 - - - - 
+Cars on the road from 4 to 7: 
+- - - - - - - - - - 
+Cars on the road from 5 to 7: 
+- - - - - - - - - - 
+Cars on the road from 6 to 7: 
+3 1 1 - - - - - - - 
+
+CYCLE 155 - Car successfully traveled from 6 to 5 in 156 time steps.
+CYCLE 157 - Car successfully traveled from 5 to 1 in 158 time steps.
+CYCLE 157 - Car successfully traveled from 2 to 4 in 158 time steps.
+CYCLE 167 - Car successfully traveled from 6 to 1 in 168 time steps.
+CYCLE 167 - Car successfully traveled from 2 to 5 in 168 time steps.
+CYCLE 167 - Car successfully traveled from 2 to 7 in 168 time steps.
+CYCLE 168 - Car successfully traveled from 6 to 2 in 169 time steps.
+CYCLE 168 - Car successfully traveled from 6 to 3 in 169 time steps.
+
+CYCLE 174 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - - - - 
+Cars on the road from 3 to 1: 
+- - - - - - - - - - 
+Cars on the road from 3 to 2: 
+- - - 2 - - - - - - 
+Cars on the road from 0 to 3: 
+- - - - - - - - - - 
+Cars on the road from 1 to 3: 
+- - - - - - - - - - 
+Cars on the road from 2 to 3: 
+5 5 5 5 5 5 - - - - 
+Cars on the road from 7 to 3: 
+1 - - - - 
+Cars on the road from 7 to 4: 
+- - - - - - - - - - 
+Cars on the road from 7 to 5: 
+- - - - - - - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - - - 
+Cars on the road from 3 to 7: 
+5 - - - - 
+Cars on the road from 4 to 7: 
+- - - - - - - - - - 
+Cars on the road from 5 to 7: 
+- - - - - - - - - - 
+Cars on the road from 6 to 7: 
+1 - - - - - - - - - 
+
+CYCLE 177 - Car successfully traveled from 6 to 2 in 178 time steps.
+CYCLE 187 - Car successfully traveled from 6 to 1 in 188 time steps.
+CYCLE 187 - Car successfully traveled from 2 to 5 in 184 time steps.
+CYCLE 197 - Car successfully traveled from 6 to 1 in 198 time steps.
+CYCLE 197 - Car successfully traveled from 2 to 5 in 194 time steps.
+CYCLE 207 - Car successfully traveled from 2 to 5 in 204 time steps.
+CYCLE 217 - Car successfully traveled from 2 to 5 in 214 time steps.
+CYCLE 227 - Car successfully traveled from 2 to 5 in 224 time steps.
+CYCLE 237 - Car successfully traveled from 2 to 5 in 234 time steps.
+CYCLE 247 - Car successfully traveled from 2 to 5 in 244 time steps.
+
+Average number of time steps to the reach their destination is 102.49.
+Maximum number of time steps to the reach their destination is 244.
+
+--------------- END OF OUTPUT FOR data-Complex1.txt -----------------
+
+
+
+--------------- START OF OUTPUT FOR data-Complex2.txt -----------------
+
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 0 to 3
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 1 to 3
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 2 to 3
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 3 to 7
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 7 to 3
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 4 to 7
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 5 to 7
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 6 to 7
+
+CYCLE 0 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - - - - 
+Cars on the road from 3 to 1: 
+- - - - - - - - - - 
+Cars on the road from 3 to 2: 
+- - - - - - - - - - 
+Cars on the road from 0 to 3: 
+- - - - - - - - - - 
+Cars on the road from 1 to 3: 
+- - - - - - - - - - 
+Cars on the road from 2 to 3: 
+- - - - - - - - - - 
+Cars on the road from 7 to 3: 
+- - - - - 
+Cars on the road from 7 to 4: 
+- - - - - - - - - - 
+Cars on the road from 7 to 5: 
+- - - - - - - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - - - 
+Cars on the road from 3 to 7: 
+- - - - - 
+Cars on the road from 4 to 7: 
+- - - - - - - - - - 
+Cars on the road from 5 to 7: 
+- - - - - - - - - - 
+Cars on the road from 6 to 7: 
+- - - - - - - - - - 
+
+
+CYCLE 1 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - - - - 
+Cars on the road from 3 to 1: 
+- - - - - - - - - - 
+Cars on the road from 3 to 2: 
+- - - - - - - - - - 
+Cars on the road from 0 to 3: 
+- - - - - - - - - 5 
+Cars on the road from 1 to 3: 
+- - - - - - - - - 7 
+Cars on the road from 2 to 3: 
+- - - - - - - - - 4 
+Cars on the road from 7 to 3: 
+- - - - 0 
+Cars on the road from 7 to 4: 
+- - - - - - - - - - 
+Cars on the road from 7 to 5: 
+- - - - - - - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - - - 
+Cars on the road from 3 to 7: 
+- - - - 4 
+Cars on the road from 4 to 7: 
+- - - - - - - - - 0 
+Cars on the road from 5 to 7: 
+- - - - - - - - - 0 
+Cars on the road from 6 to 7: 
+- - - - - - - - - 2 
+
+
+CYCLE 2 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - - - - 
+Cars on the road from 3 to 1: 
+- - - - - - - - - - 
+Cars on the road from 3 to 2: 
+- - - - - - - - - - 
+Cars on the road from 0 to 3: 
+- - - - - - - - 5 - 
+Cars on the road from 1 to 3: 
+- - - - - - - - 7 - 
+Cars on the road from 2 to 3: 
+- - - - - - - - 4 - 
+Cars on the road from 7 to 3: 
+- - - 0 - 
+Cars on the road from 7 to 4: 
+- - - - - - - - - - 
+Cars on the road from 7 to 5: 
+- - - - - - - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - - - 
+Cars on the road from 3 to 7: 
+- - - 4 - 
+Cars on the road from 4 to 7: 
+- - - - - - - - 0 - 
+Cars on the road from 5 to 7: 
+- - - - - - - - 0 - 
+Cars on the road from 6 to 7: 
+- - - - - - - - 2 - 
+
+
+CYCLE 3 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - - - - 
+Cars on the road from 3 to 1: 
+- - - - - - - - - - 
+Cars on the road from 3 to 2: 
+- - - - - - - - - - 
+Cars on the road from 0 to 3: 
+- - - - - - - 5 - 1 
+Cars on the road from 1 to 3: 
+- - - - - - - 7 - 0 
+Cars on the road from 2 to 3: 
+- - - - - - - 4 - 2 
+Cars on the road from 7 to 3: 
+- - 0 - 2 
+Cars on the road from 7 to 4: 
+- - - - - - - - - - 
+Cars on the road from 7 to 5: 
+- - - - - - - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - - - 
+Cars on the road from 3 to 7: 
+- - 4 - 7 
+Cars on the road from 4 to 7: 
+- - - - - - - 0 - 1 
+Cars on the road from 5 to 7: 
+- - - - - - - 0 - 0 
+Cars on the road from 6 to 7: 
+- - - - - - - 2 - 2 
+
+CYCLE 4 - ADD_CAR_EVENT - Cars enqueued on road from 2 to 3
+
+CYCLE 4 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - - - - 
+Cars on the road from 3 to 1: 
+- - - - - - - - - - 
+Cars on the road from 3 to 2: 
+- - - - - - - - - - 
+Cars on the road from 0 to 3: 
+- - - - - - 5 - 1 - 
+Cars on the road from 1 to 3: 
+- - - - - - 7 - 0 - 
+Cars on the road from 2 to 3: 
+- - - - - - 4 - 2 - 
+Cars on the road from 7 to 3: 
+- 0 - 2 - 
+Cars on the road from 7 to 4: 
+- - - - - - - - - - 
+Cars on the road from 7 to 5: 
+- - - - - - - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - - - 
+Cars on the road from 3 to 7: 
+- 4 - 7 - 
+Cars on the road from 4 to 7: 
+- - - - - - 0 - 1 - 
+Cars on the road from 5 to 7: 
+- - - - - - 0 - 0 - 
+Cars on the road from 6 to 7: 
+- - - - - - 2 - 2 - 
+
+
+CYCLE 5 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - - - - 
+Cars on the road from 3 to 1: 
+- - - - - - - - - - 
+Cars on the road from 3 to 2: 
+- - - - - - - - - - 
+Cars on the road from 0 to 3: 
+- - - - - 5 - 1 - 5 
+Cars on the road from 1 to 3: 
+- - - - - 7 - 0 - 4 
+Cars on the road from 2 to 3: 
+- - - - - 4 - 2 - 7 
+Cars on the road from 7 to 3: 
+0 - 2 - 1 
+Cars on the road from 7 to 4: 
+- - - - - - - - - - 
+Cars on the road from 7 to 5: 
+- - - - - - - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - - - 
+Cars on the road from 3 to 7: 
+4 - 7 - 5 
+Cars on the road from 4 to 7: 
+- - - - - 0 - 1 - 2 
+Cars on the road from 5 to 7: 
+- - - - - 0 - 0 - 0 
+Cars on the road from 6 to 7: 
+- - - - - 2 - 2 - 1 
+
+
+CYCLE 6 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - - - - 
+Cars on the road from 3 to 1: 
+- - - - - - - - - - 
+Cars on the road from 3 to 2: 
+- - - - - - - - - - 
+Cars on the road from 0 to 3: 
+- - - - 5 - 1 - 5 - 
+Cars on the road from 1 to 3: 
+- - - - 7 - 0 - 4 - 
+Cars on the road from 2 to 3: 
+- - - - 4 - 2 - 7 - 
+Cars on the road from 7 to 3: 
+0 2 - 1 - 
+Cars on the road from 7 to 4: 
+- - - - - - - - - - 
+Cars on the road from 7 to 5: 
+- - - - - - - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - - - 
+Cars on the road from 3 to 7: 
+4 7 - 5 - 
+Cars on the road from 4 to 7: 
+- - - - 0 - 1 - 2 - 
+Cars on the road from 5 to 7: 
+- - - - 0 - 0 - 0 - 
+Cars on the road from 6 to 7: 
+- - - - 2 - 2 - 1 - 
+
+
+CYCLE 7 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - - - - 
+Cars on the road from 3 to 1: 
+- - - - - - - - - - 
+Cars on the road from 3 to 2: 
+- - - - - - - - - - 
+Cars on the road from 0 to 3: 
+- - - 5 - 1 - 5 - 6 
+Cars on the road from 1 to 3: 
+- - - 7 - 0 - 4 - 5 
+Cars on the road from 2 to 3: 
+- - - 4 - 2 - 7 - 6 
+Cars on the road from 7 to 3: 
+0 2 1 - 3 
+Cars on the road from 7 to 4: 
+- - - - - - - - - - 
+Cars on the road from 7 to 5: 
+- - - - - - - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - - - 
+Cars on the road from 3 to 7: 
+4 7 5 - 6 
+Cars on the road from 4 to 7: 
+- - - 0 - 1 - 2 - 5 
+Cars on the road from 5 to 7: 
+- - - 0 - 0 - 0 - 0 
+Cars on the road from 6 to 7: 
+- - - 2 - 2 - 1 - 1 
+
+
+CYCLE 8 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 3 to 0: 
+- - - - - - - - - 0 
+Cars on the road from 3 to 1: 
+- - - - - - - - - - 
+Cars on the road from 3 to 2: 
+- - - - - - - - - - 
+Cars on the road from 0 to 3: 
+- - 5 - 1 - 5 - 6 - 
+Cars on the road from 1 to 3: 
+- - 7 - 0 - 4 - 5 - 
+Cars on the road from 2 to 3: 
+- - 4 - 2 - 7 - 6 - 
+Cars on the road from 7 to 3: 
+2 - 1 3 - 
+Cars on the road from 7 to 4: 
+- - - - - - - - - 4 
+Cars on the road from 7 to 5: 
+- - - - - - - - - - 
+Cars on the road from 7 to 6: 
+- - - - - - - - - - 
+Cars on the road from 3 to 7: 
+7 - 5 6 - 
+Cars on the road from 4 to 7: 
+- - 0 - 1 - 2 - 5 - 
+Cars on the road from 5 to 7: 
+- - 0 - 0 - 0 - 0 - 
+Cars on the road from 6 to 7: 
+- - 2 - 2 - 1 - 1 - 
+
+CYCLE 8 - Car successfully traveled from 3 to 7 in 9 time steps.
+CYCLE 17 - Car successfully traveled from 7 to 0 in 18 time steps.
+CYCLE 17 - Car successfully traveled from 3 to 4 in 18 time steps.
+CYCLE 18 - Car successfully traveled from 7 to 2 in 19 time steps.
+CYCLE 18 - Car successfully traveled from 7 to 3 in 19 time steps.
+CYCLE 23 - Car successfully traveled from 1 to 0 in 24 time steps.
+CYCLE 25 - Car successfully traveled from 2 to 2 in 26 time steps.
+CYCLE 27 - Car successfully traveled from 7 to 1 in 28 time steps.
+CYCLE 27 - Car successfully traveled from 3 to 5 in 28 time steps.
+CYCLE 28 - Car successfully traveled from 3 to 6 in 29 time steps.
+CYCLE 28 - Car successfully traveled from 1 to 7 in 29 time steps.
+CYCLE 30 - Car successfully traveled from 0 to 1 in 31 time steps.
+CYCLE 37 - Car successfully traveled from 4 to 0 in 38 time steps.
+CYCLE 37 - Car successfully traveled from 0 to 5 in 38 time steps.
+CYCLE 47 - Car successfully traveled from 5 to 0 in 48 time steps.
+CYCLE 47 - Car successfully traveled from 2 to 4 in 48 time steps.
+CYCLE 48 - Car successfully traveled from 6 to 2 in 49 time steps.
+CYCLE 48 - Car successfully traveled from 0 to 5 in 49 time steps.
+CYCLE 50 - Car successfully traveled from 4 to 5 in 51 time steps.
+CYCLE 57 - Car successfully traveled from 4 to 1 in 58 time steps.
+CYCLE 57 - Car successfully traveled from 1 to 4 in 58 time steps.
+CYCLE 58 - Car successfully traveled from 5 to 0 in 59 time steps.
+CYCLE 58 - Car successfully traveled from 0 to 6 in 59 time steps.
+CYCLE 58 - Car successfully traveled from 0 to 7 in 59 time steps.
+CYCLE 67 - Car successfully traveled from 4 to 2 in 68 time steps.
+CYCLE 67 - Car successfully traveled from 1 to 5 in 68 time steps.
+CYCLE 68 - Car successfully traveled from 4 to 0 in 69 time steps.
+CYCLE 68 - Car successfully traveled from 4 to 3 in 69 time steps.
+CYCLE 77 - Car successfully traveled from 5 to 0 in 78 time steps.
+CYCLE 77 - Car successfully traveled from 1 to 6 in 78 time steps.
+CYCLE 78 - Car successfully traveled from 4 to 3 in 79 time steps.
+CYCLE 78 - Car successfully traveled from 0 to 4 in 79 time steps.
+CYCLE 87 - Car successfully traveled from 5 to 0 in 88 time steps.
+CYCLE 87 - Car successfully traveled from 1 to 4 in 88 time steps.
+CYCLE 90 - Car successfully traveled from 0 to 2 in 91 time steps.
+CYCLE 92 - Car successfully traveled from 1 to 1 in 93 time steps.
+CYCLE 93 - Car successfully traveled from 1 to 2 in 94 time steps.
+CYCLE 97 - Car successfully traveled from 5 to 2 in 98 time steps.
+CYCLE 97 - Car successfully traveled from 0 to 4 in 98 time steps.
+CYCLE 97 - Car successfully traveled from 0 to 7 in 98 time steps.
+CYCLE 98 - Car successfully traveled from 4 to 0 in 99 time steps.
+CYCLE 98 - Car successfully traveled from 1 to 5 in 99 time steps.
+CYCLE 100 - Car successfully traveled from 4 to 5 in 101 time steps.
+CYCLE 107 - Car successfully traveled from 5 to 2 in 108 time steps.
+CYCLE 108 - Car successfully traveled from 4 to 0 in 109 time steps.
+CYCLE 108 - Car successfully traveled from 1 to 6 in 109 time steps.
+CYCLE 108 - Car successfully traveled from 2 to 7 in 109 time steps.
+CYCLE 117 - Car successfully traveled from 5 to 2 in 118 time steps.
+CYCLE 117 - Car successfully traveled from 0 to 6 in 118 time steps.
+CYCLE 127 - Car successfully traveled from 5 to 2 in 128 time steps.
+CYCLE 127 - Car successfully traveled from 2 to 6 in 128 time steps.
+CYCLE 137 - Car successfully traveled from 6 to 2 in 138 time steps.
+CYCLE 137 - Car successfully traveled from 2 to 6 in 138 time steps.
+CYCLE 138 - Car successfully traveled from 5 to 1 in 139 time steps.
+CYCLE 145 - Car successfully traveled from 2 to 1 in 146 time steps.
+CYCLE 147 - Car successfully traveled from 6 to 1 in 148 time steps.
+CYCLE 147 - Car successfully traveled from 2 to 5 in 148 time steps.
+CYCLE 155 - Car successfully traveled from 6 to 5 in 156 time steps.
+CYCLE 157 - Car successfully traveled from 5 to 1 in 158 time steps.
+CYCLE 157 - Car successfully traveled from 2 to 4 in 158 time steps.
+CYCLE 160 - ADD_CAR_EVENT - Cars enqueued on road from 0 to 3
+CYCLE 167 - Car successfully traveled from 6 to 1 in 168 time steps.
+CYCLE 167 - Car successfully traveled from 2 to 5 in 168 time steps.
+CYCLE 167 - Car successfully traveled from 2 to 7 in 168 time steps.
+CYCLE 168 - Car successfully traveled from 6 to 2 in 169 time steps.
+CYCLE 168 - Car successfully traveled from 6 to 3 in 169 time steps.
+CYCLE 177 - Car successfully traveled from 6 to 2 in 178 time steps.
+CYCLE 180 - Car successfully traveled from 0 to 1 in 21 time steps.
+CYCLE 181 - Car successfully traveled from 0 to 3 in 22 time steps.
+CYCLE 187 - Car successfully traveled from 6 to 1 in 188 time steps.
+CYCLE 187 - Car successfully traveled from 2 to 5 in 184 time steps.
+CYCLE 190 - Car successfully traveled from 0 to 2 in 31 time steps.
+CYCLE 197 - Car successfully traveled from 6 to 1 in 198 time steps.
+CYCLE 197 - Car successfully traveled from 2 to 5 in 194 time steps.
+CYCLE 207 - Car successfully traveled from 2 to 5 in 204 time steps.
+CYCLE 217 - Car successfully traveled from 2 to 5 in 214 time steps.
+CYCLE 227 - Car successfully traveled from 2 to 5 in 224 time steps.
+CYCLE 237 - Car successfully traveled from 2 to 5 in 234 time steps.
+CYCLE 247 - Car successfully traveled from 2 to 5 in 244 time steps.
+
+Average number of time steps to the reach their destination is 99.50.
+Maximum number of time steps to the reach their destination is 244.
+
+--------------- END OF OUTPUT FOR data-Complex2.txt -----------------
+
+
+
+--------------- START OF OUTPUT FOR data-NearGridlock.txt -----------------
+
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 0 to 1
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 1 to 2
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 2 to 0
+
+CYCLE 0 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 2 to 0: 
+- - 
+Cars on the road from 0 to 1: 
+- - 
+Cars on the road from 1 to 2: 
+- - 
+
+
+CYCLE 1 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 2 to 0: 
+- 1 
+Cars on the road from 0 to 1: 
+- 2 
+Cars on the road from 1 to 2: 
+- 0 
+
+
+CYCLE 2 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 2 to 0: 
+1 - 
+Cars on the road from 0 to 1: 
+2 - 
+Cars on the road from 1 to 2: 
+0 - 
+
+CYCLE 40 - Car successfully traveled from 2 to 1 in 41 time steps.
+CYCLE 50 - Car successfully traveled from 1 to 0 in 51 time steps.
+CYCLE 50 - Car successfully traveled from 2 to 1 in 51 time steps.
+CYCLE 60 - Car successfully traveled from 1 to 0 in 61 time steps.
+CYCLE 60 - Car successfully traveled from 0 to 2 in 61 time steps.
+
+Average number of time steps to the reach their destination is 53.00.
+Maximum number of time steps to the reach their destination is 61.
+
+--------------- END OF OUTPUT FOR data-NearGridlock.txt -----------------
+
+
+
+--------------- START OF OUTPUT FOR data-Gridlock.txt -----------------
+
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 0 to 1
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 1 to 2
+CYCLE 0 - ADD_CAR_EVENT - Cars enqueued on road from 2 to 0
+
+CYCLE 0 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 2 to 0: 
+- - 
+Cars on the road from 0 to 1: 
+- - 
+Cars on the road from 1 to 2: 
+- - 
+Cars on the road from 2 to 3: 
+- - 
+
+CYCLE 1 - ADD_CAR_EVENT - Cars enqueued on road from 2 to 3
+
+CYCLE 1 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 2 to 0: 
+- 1 
+Cars on the road from 0 to 1: 
+- 2 
+Cars on the road from 1 to 2: 
+- 0 
+Cars on the road from 2 to 3: 
+- - 
+
+
+CYCLE 2 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 2 to 0: 
+1 - 
+Cars on the road from 0 to 1: 
+2 - 
+Cars on the road from 1 to 2: 
+0 - 
+Cars on the road from 2 to 3: 
+- 3 
+
+CYCLE 10 - Car successfully traveled from 2 to 3 in 10 time steps.
+CYCLE 20 - Car successfully traveled from 2 to 3 in 20 time steps.
+
+CYCLE 25 - PRINT_ROADS_EVENT - Current contents of the roads:
+Cars on the road from 2 to 0: 
+1 1 
+Cars on the road from 0 to 1: 
+2 2 
+Cars on the road from 1 to 2: 
+0 0 
+Cars on the road from 2 to 3: 
+- - 
+
+CYCLE 31 - Gridlock detected.
+
+--------------- END OF OUTPUT FOR data-Gridlock.txt -----------------
+
