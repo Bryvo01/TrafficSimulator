@@ -132,17 +132,19 @@ public class TrafficSimulator
                                 Node nextNode = trafficGraph.getNextOnPath(fromNode, toNode);
                                 for (RoadData rd : roadOrder) {
                                     if (rd.getToNode().equals(nextNode) && rd.getFromNode().equals(fromNode)) {
-                                        //if the light is green and there is space, drive onto the road
                                         List tempRoadFill = rd.getRoadFill();
+                                        //if the light is green and there is space AND the Queue is empty!!, drive onto the road
                                         if (rd.getGreenStatus() && (tempRoadFill.get(tempRoadFill.size() - 1) == null) &&
                                                 rd.isCarQueueEmpty()) {
-                                            tempRoadFill.set(tempRoadFill.size() - 1, toCar);
-                                            rd.setRoadFill(tempRoadFill);
-                                            eventPriorityQueue.add(new AdvanceCarsEvent(4, cycle, rd, roadOrder));
+//                                            tempRoadFill.set(tempRoadFill.size() - 1, toCar);
+//                                            rd.setRoadFill(tempRoadFill);
+                                            //eventPriorityQueue.add(new AdvanceCarsEvent(4, cycle, rd, roadOrder));
                                         } else {
-                                            List<Car> newDestination = new ArrayList<Car>();
-                                            newDestination.add(toCar);
-                                            eventPriorityQueue.add(new AddCarEvent(1, cycle, rd, newDestination));
+                                            //wait in line like a good boy - which means throw you back into the AdvanceCarEvent
+                                            eventPriorityQueue.add(new AdvanceCarsEvent(4, cycle+1, rd, roadOrder));
+//                                            List<Car> newDestination = new ArrayList<Car>();
+//                                            newDestination.add(toCar);
+//                                            eventPriorityQueue.add(new AddCarEvent(1, cycle, rd, newDestination));
                                         }
                                     }
                                 }
@@ -161,7 +163,7 @@ public class TrafficSimulator
                 findAll.add(tempRd.isRoadEmpty());
                 findAll.add(tempRd.isCarQueueEmpty());
                 if(!tempRd.isCarQueueEmpty() || !tempRd.isRoadEmpty()) {
-                    eventPriorityQueue.add(new AdvanceCarsEvent(4, cycle-1, tempRd, roadOrder));
+                    eventPriorityQueue.add(new AdvanceCarsEvent(4, cycle, tempRd, roadOrder));
                 }
                 if(cycle > tempRd.getGreenOff() && cycle % tempRd.getCycleResets() == 0 ){
                     eventPriorityQueue.add(new GreenLightEvent(5, cycle, tempRd));
@@ -182,7 +184,7 @@ public class TrafficSimulator
         int maxIndex = findMaxIndex(allDistances);
         avgDistance = avgDistance/allCars.size();
         System.out.println("\nAverage number of time steps to the reach their destination is " + String.format("%.2f",avgDistance));
-        System.out.println("Maximum number of time steps to the reach their destination is " + maxIndex);
+        System.out.println("Maximum number of time steps to the reach their destination is " + allDistances.get(maxIndex));
 
     }
 

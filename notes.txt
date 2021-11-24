@@ -33,38 +33,3 @@ carCommandList = list of lists. Each inner list has the road(from int, to int),
 carDestinations = list of destinations for the cars queued to go on the road
 printCommandCycleNumber = list of what cycles to print a command on
 
-
-
-                        case 4:
-                            List advance = tempEvent.advanceCars();
-                            //System.out.println("Case 4 start: " + (boolean) advance.get(0));
-                            if((boolean) advance.get(0)) {
-                                Node fromNode = (Node) advance.get(1);
-                                Node toNode = (Node) advance.get(2);
-                                Car toCar = (Car) advance.get(3);
-                                Node nextNode = trafficGraph.getNextOnPath(fromNode, toNode);
-                                for (RoadData rd : roadOrder) {
-                                    //find the next road to go on
-                                    //System.out.println("other if: " + (rd.getToNode().equals(nextNode) && rd.getFromNode().equals(fromNode)));
-                                    if (rd.getToNode().equals(nextNode) && rd.getFromNode().equals(fromNode)) {
-                                        //if the light is green and there is space, drive onto the road
-                                        List tempRoadFill = rd.getRoadFill();
-                                        //System.out.println("before if: " + tempRoadFill + "GreenLight: " +rd.getGreenStatus());
-                                        if (rd.getGreenStatus() && (tempRoadFill.get(tempRoadFill.size() - 1) == null) &&
-                                                rd.isCarQueueEmpty()) {
-                                            //System.out.println("inside if: " + tempRoadFill);
-                                            tempRoadFill.set(tempRoadFill.size() - 1, toCar);
-                                            rd.setRoadFill(tempRoadFill);
-                                            eventPriorityQueue.add(new AdvanceCarsEvent(4, cycle, rd, roadOrder));
-                                        } else {
-                                            List<Car> newDestination = new ArrayList<Car>();
-                                            newDestination.add(toCar);
-                                            eventPriorityQueue.add(new AddCarEvent(1, cycle, rd, newDestination));
-                                        }
-                                    }
-                                    //Event tempAddCar = (Event) advance.get(1);
-                                    //Node nextNode = trafficGraph.getNextOnPath(tempAddCar.getRoadData().getEdge().getFrom(), )
-                                    //eventPriorityQueue.add((Event) advance.get(1));
-                                }
-                            }
-                            break;
